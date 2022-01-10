@@ -9,4 +9,10 @@
     <insert id="save">
         insert into t_student (id,name,age)values(#{id},#{name}#{age})
     </insert>
+    <select id="test02" resultType="Student">
+        select * from t_student where id in
+        <foreach collection="array" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
 </mapper>
