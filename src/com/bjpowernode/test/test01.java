@@ -17,10 +17,13 @@ public class test01 {
             for(Student s:slist){
                 System.out.println(s.getName());
             }*/
-            Student s=new Student();
+      /*      Student s=new Student();
             s.setId("A0002");
             s.setAge(24);
             Student s1=ss.test03(s);
-            System.out.println(s1.getName());
+            System.out.println(s1.getName());*/
+      List<Student> sList=ss.test04();
+      for(Student s:sList){
+      System.out.println(s.getName());}
     }
 }

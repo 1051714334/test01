@@ -11,4 +11,6 @@ public interface StudentService {
     List<Student> test02(String[] arr);
 
     Student test03(Student s);
+
+    List<Student> test04();
 }
