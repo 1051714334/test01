@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bjpowernode.dao.StudentDao">
-    <select id="getById" resultType="com.bjpowernode.domain.Student">
+ <!--   <select id="getById" resultType="com.bjpowernode.domain.Student">
  select * from t_student where id = #{id}
  </select>
     <insert id="save">
@@ -25,5 +25,14 @@
                 and age=#{age}
             </if>
         </where>
+    </select>-->
+    <resultMap id="strmap" type="Student">
+        <id property="id" column="id"/>
+         <result property="name" column="fulname"/>
+        <result property="age" column="age"/>
+
+    </resultMap>
+    <select id="test04" resultMap="strmap">
+        select * from t_student
     </select>
 </mapper>
