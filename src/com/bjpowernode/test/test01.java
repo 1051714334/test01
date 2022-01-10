@@ -17,5 +17,10 @@ public class test01 {
             for(Student s:slist){
                 System.out.println(s.getName());
             }*/
+            Student s=new Student();
+            s.setId("A0002");
+            s.setAge(24);
+            Student s1=ss.test03(s);
+            System.out.println(s1.getName());
     }
 }

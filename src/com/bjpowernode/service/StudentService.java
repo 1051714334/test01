@@ -9,4 +9,6 @@ public interface StudentService {
     public void save(Student s);
 
     List<Student> test02(String[] arr);
+
+    Student test03(Student s);
 }

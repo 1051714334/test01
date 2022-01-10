@@ -15,4 +15,15 @@
             #{id}
         </foreach>
     </select>
+    <select id="test03" resultType="Student">
+        select * from t_student
+        <where>
+            <if test="id!=null and id!=''">
+                id=#{id}
+            </if>
+            <if test="age!=null and age!=''">
+                and age=#{age}
+            </if>
+        </where>
+    </select>
 </mapper>

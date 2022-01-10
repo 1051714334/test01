@@ -25,4 +25,10 @@ StudentDao studentDao= SqlSessionUtil.getSqlSession().getMapper(StudentDao.class
         List<Student> sList=studentDao.test02(arr);
         return sList;
     }
+
+    @Override
+    public Student test03(Student s) {
+        Student s1=studentDao.test03(s);
+        return s1;
+    }
 }
